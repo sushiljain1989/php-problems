@@ -1,4 +1,28 @@
 <?php
+
+/*
+Problem Description
+Write a function that provides change directory (cd) function for an abstract file system.
+
+Notes:
+
+Root path is '/'.
+Path separator is '/'.
+Parent directory is addressable as '..'.
+Directory names consist only of English alphabet letters (A-Z and a-z).
+The function will not be passed any invalid paths.
+Do not use built-in path-related functions.
+For example:
+
+$path = new Path('/a/b/c/d');
+$path->cd('../x')
+echo $path->currentPath;
+should display '/a/b/c/x'.
+
+
+
+
+*/
 class Path
 {
     public $currentPath;
@@ -8,6 +32,7 @@ class Path
         $this->currentPath = $path;
     }
 
+    //this function returns the current path (simulates the pwd command in linux)
     public function cd($newPath)
     {
        
